@@ -8,14 +8,24 @@ public class TraitementCommande {
         int cpt = 0;
 
         if (texte.contains("bonjour")) {
+            cpt++;
+            if (cpt != 1)
+            sRet += "           ";
             sRet += "Bonjour Romain, comment puis-je vous aider ? \n";
         }
         if (texte.contains("heure")) {
+            cpt++;
+            if (cpt != 1)
+            sRet += "           ";
             sRet += "Il est " + java.time.LocalTime.now().withNano(0) + "\n";
         } 
         if (texte.contains("date")) {
+            cpt++;
+            if (cpt != 1)
+            sRet += "           ";
             sRet += "Nous sommes le " + java.time.LocalDate.now()  + "\n";
-        } 
+
+        }
         //    return "Désolé, je n'ai pas compris la commande. \n";
         
         return sRet;

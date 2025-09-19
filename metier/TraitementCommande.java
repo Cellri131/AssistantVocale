@@ -26,8 +26,9 @@ public class TraitementCommande {
             sRet += "Nous sommes le " + java.time.LocalDate.now()  + "\n";
 
         }
+        if (texte.contains("quit")) System.exit(0); ;
         //    return "Désolé, je n'ai pas compris la commande. \n";
-        
+        if (sRet.equals("")) sRet = "Désolé, je n'ai pas compris la commande. \n";
         return sRet;
     }
 }
